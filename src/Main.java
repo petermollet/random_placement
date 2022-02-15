@@ -1,20 +1,18 @@
-import com.sun.istack.internal.NotNull;
-
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         String[] firstNames = {
-            "Alexandre", "Amelie", "Brice",
-            "Dylan", "Jason", "Joachim",
-            "Kevin", "Romain", "Tanguy",
-            "Timothé", "Valentin", "Walid"
+                "Alexandre", "Amelie", "Brice",
+                "Dylan", "Jason", "Joachim",
+                "Kevin", "Romain", "Tanguy",
+                "Timothé", "Valentin", "Walid"
         };
         firstNames = randomize(firstNames);
         System.out.println(group(firstNames, 2));
     }
 
-    static String[] randomize(@NotNull final String[] strings) {
+    static String[] randomize(final String[] strings) {
         String[] randomized = new String[strings.length];
         int r;
         for (int i = 0; i < strings.length; i++) {
@@ -27,7 +25,7 @@ public class Main {
         return randomized;
     }
 
-    static String group(@NotNull final String[] strings, @NotNull final int numberByGroup){
+    static String group(final String[] strings, final int numberByGroup){
         StringBuilder groups = new StringBuilder();
         final String SEPARATOR  = "---------------\n";
         groups.append(SEPARATOR);
